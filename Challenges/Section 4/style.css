@@ -15,6 +15,10 @@ body {
   width: 825px;
   margin: 50px auto;
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr 240px 240px;
+  column-gap: 40px;
+  /* row-gap: 20px; */
 }
 .product-title {
   text-align: center;
@@ -22,6 +26,7 @@ body {
   padding: 15px;
   text-transform: uppercase;
   background-color: #f7f7f7;
+  grid-column: 1 /-1;
 }
 
 .sale {
@@ -68,7 +73,7 @@ body {
 }
 
 .color {
-  margin-right: 10px;
+  /* margin-right: 10px; */
   height: 22px;
   width: 22px;
   display: inline-block;
@@ -92,7 +97,7 @@ body {
 .details-title {
   font-size: 16px;
   text-transform: uppercase;
-  margin-top: 30px;
+  margin-top: 5px;
   margin-bottom: 15px;
 }
 .details-list {
@@ -112,6 +117,7 @@ body {
   width: 100%;
   padding: 15px;
   border-top: 4px solid black;
+  grid-column: 1 / -1;
 }
 
 .add-cart:hover {
@@ -149,16 +155,16 @@ body {
 } */
 
 /* FLEXBOX */
-.container {
+/* .container {
   display: flex;
   gap: 40px;
-}
+} */
 
-.product-img {
+/* .product-img {
   flex: 0 0 250px;
   margin-bottom: 0;
   align-self: stretch;
-}
+} */
 .product-info {
   flex: 1;
   margin-top: 20px;
@@ -177,7 +183,16 @@ body {
 }
 
 .product-details {
-  /*   width: 243px; */
-  /* margin-top: 20px; */
+  width: 243px;
+  margin-top: 20px;
   flex: 1;
+  align-self: flex-start;
+}
+
+/* GRID */
+
+.shipping {
+  grid-column: 1;
+  margin-bottom: 0;
+  justify-content: right;
 }
